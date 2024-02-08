@@ -66,7 +66,7 @@ class SignInActivity : AppCompatActivity() {
             }else{
                 auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful){
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, FrontPage::class.java)
                         startActivity(intent)
                     }else{
                         Toast.makeText(this, "Ha ocurrido un error, inténtalo de nuevo", Toast.LENGTH_SHORT).show()

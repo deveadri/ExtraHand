@@ -6,5 +6,8 @@
     <color name="purple_700">#4D08AF</color>
     <color name="teal_200">#00F4A7</color>
     <color name="teal_700">#00A642</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="lavender">#8692f7</color>
+
 
 </resources>
