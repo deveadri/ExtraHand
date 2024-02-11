@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:title=""
+        android:icon="@drawable/home_4991417"
+        android:orderInCategory="1"/>
+    <item
+        android:id="@+id/bottom_wishlist"
+        android:title=""
+        android:icon="@drawable/heart_6521660"
+        android:orderInCategory="2"/>
+    <item
+        android:id="@+id/bottom_message"
+        android:title=""
+        android:icon="@drawable/messages_7647468"
+        android:orderInCategory="4"/>
+    <item
+        android:id="@+id/bottom_upload"
+        android:title=""
+        android:icon="@drawable/upload_6785449"
+        android:orderInCategory="3"/>
+    <item
+        android:id="@+id/bottom_profile"
+        android:title=""
+        android:icon="@drawable/user_8647312"
+        android:orderInCategory="5"/>
+
+</menu>
