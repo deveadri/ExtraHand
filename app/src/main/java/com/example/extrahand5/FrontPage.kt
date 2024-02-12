@@ -6,10 +6,29 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import com.example.extrahand5.Jobs.CarpinteroActivity
+import com.example.extrahand5.Jobs.CerrajeroActivity
+import com.example.extrahand5.Jobs.ElectricistaActivity
+import com.example.extrahand5.Jobs.FontaneroActivity
+import com.example.extrahand5.Jobs.ObreroActivity
+import com.example.extrahand5.Jobs.PintorActivity
+import com.example.extrahand5.Navigator.HomeFragment
+import com.example.extrahand5.Navigator.MessagesFragment
+import com.example.extrahand5.Navigator.ProfileFragment
+import com.example.extrahand5.Navigator.UploadFragment
+import com.example.extrahand5.Navigator.WishlistFragment
+import com.example.extrahand5.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class FrontPage: AppCompatActivity() {
     private var carpinteroCard: CardView? = null
+    private var cerrajeroCard: CardView? = null
+    private var electricistaCard: CardView? = null
+    private var fontaneroCard: CardView? = null
+    private var pintorCard: CardView? = null
+    private var obreroCard: CardView? = null
+
+
     private lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,23 +40,24 @@ class FrontPage: AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when(menuItem.itemId){
                 R.id.bottom_home -> {
-                    replaceFragment(HomeFragment())
+                    startActivity(Intent(this, FrontPage::class.java))
                     true
                 }
                 R.id.bottom_wishlist -> {
-                    replaceFragment(WishlistFragment())
+                    startActivity(Intent(this, WishlistFragment::class.java))
                     true
                 }
                 R.id.bottom_upload -> {
-                    Toast.makeText(this, "Upload Image & Video", Toast.LENGTH_SHORT).show()
+                    // Abre la actividad de carga de imágenes y vídeos
+                    startActivity(Intent(this, UploadFragment::class.java))
                     true
                 }
                 R.id.bottom_message -> {
-                    replaceFragment(MessagesFragment())
+                    startActivity(Intent(this, MessagesFragment::class.java))
                     true
                 }
                 R.id.bottom_profile -> {
-                    replaceFragment(ProfileFragment())
+                    startActivity(Intent(this, ProfileFragment::class.java))
                     true
                 }
                 else -> false
@@ -47,9 +67,29 @@ class FrontPage: AppCompatActivity() {
 
         carpinteroCard = findViewById(R.id.carpinteroCard)
         carpinteroCard?.setOnClickListener {
-            val intent = Intent(this@FrontPage, CarpinteroActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, CarpinteroActivity::class.java))
         }
+        cerrajeroCard = findViewById(R.id.cerrajeroCard)
+        cerrajeroCard?.setOnClickListener {
+            startActivity(Intent(this, CerrajeroActivity::class.java))
+        }
+        electricistaCard = findViewById(R.id.electricistaCard)
+        electricistaCard?.setOnClickListener {
+            startActivity(Intent(this, ElectricistaActivity::class.java))
+        }
+        fontaneroCard = findViewById(R.id.fontaneroCard)
+        fontaneroCard?.setOnClickListener {
+            startActivity(Intent(this, FontaneroActivity::class.java))
+        }
+        pintorCard = findViewById(R.id.pintorCard)
+        pintorCard?.setOnClickListener {
+            startActivity(Intent(this, PintorActivity::class.java))
+        }
+        obreroCard = findViewById(R.id.obreroCard)
+        obreroCard?.setOnClickListener {
+            startActivity(Intent(this, ObreroActivity::class.java))
+        }
+
     }
 
     private fun replaceFragment(fragment: Fragment){

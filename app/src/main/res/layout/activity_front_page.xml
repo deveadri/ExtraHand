@@ -11,12 +11,12 @@
         android:id="@+id/extraHandName"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="ExtraHand"
         android:textColor="@color/lavender"
-        android:textSize="35sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/extraHandImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,8 +25,8 @@
         android:id="@+id/extraHandDesc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:text="Ayuda al alcance de tu mano"
+        android:layout_marginStart="10dp"
+        android:text="¿Con qué necesitas ayuda?"
         android:textColor="@color/lavender"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/extraHandImage"
@@ -92,6 +92,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cerrajeroCard"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_margin="10dp"
@@ -100,7 +101,7 @@
             app:cardElevation="20dp">
 
             <RelativeLayout
-                android:layout_width="150dp"
+                android:layout_width="match_parent"
                 android:layout_height="120dp">
 
                 <TextView
@@ -121,7 +122,7 @@
                     android:layout_height="70dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/cerrajero" />
+                    android:src="@drawable/cerrajero2" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -141,6 +142,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/electricistaCard"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_margin="10dp"
@@ -176,6 +178,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/fontaneroCard"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_margin="10dp"
@@ -225,6 +228,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/pintorCard"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_margin="10dp"
@@ -260,6 +264,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/obreroCard"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_margin="10dp"
@@ -289,7 +294,7 @@
                     android:layout_height="70dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/obrero" />
+                    android:src="@drawable/obra" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -298,19 +303,18 @@
 
     <LinearLayout
         android:id="@+id/frame_container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="56dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="650dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" android:layout_width="0dp">
 
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="80dp"
+            android:layout_marginTop="650dp" />
     </LinearLayout>
 
 
